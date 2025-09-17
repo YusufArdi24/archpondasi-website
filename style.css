@@ -18,7 +18,7 @@
             padding: 0 30px;
         }
 
-        /* Section Styles - MISSING IN ORIGINAL */
+        /* Section Styles  */
         .section {
             padding: 80px 0;
         }
@@ -41,7 +41,7 @@
             margin-right: auto;
         }
 
-        /* Cards Grid - MISSING */
+        /* Cards Grid - houses  */
         .cards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -248,107 +248,110 @@
             flex-shrink: 0;
         }
 
-        /* Hero Section */
-        .hero {
-            background: #f8f9fa;
-            padding-top: 120px;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
+       /* Hero Section */
+.hero {
+    background: #f8f9fa;
+    padding-top: 80px; /* lebih rapat dibanding 120px */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
 
-        .hero-card {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-            margin: 0 auto;
-            max-width: 1200px;
-            width: 100%;
-        }
+.hero-card {
+width: 100%;
+    max-width: 1300px;
+    padding: 80px 50px;     /* rapikan padding */
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;   /* ini kunci: semua isi card rata bawah */
+    position: relative;
+    margin: 0 auto;
+ 
+}
 
-        .hero .card-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            padding: 4rem;
-        }
 
-        .card-text {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
+.hero .card-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: center; /* konten rata tengah vertikal */
+    padding: 0; /* rapetin */
+    height: 200%; /* biar fleksibel */
+}
 
-        .card-logo {
-            margin-bottom: 20px;
-            text-align: center;
-        }
+/* Bagian teks */
+.card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center; /* teks benar2 ditengah */
+    padding: 2rem 3rem; /* rapet tapi tetap ada ruang */
+}
 
-        .card-brand-logo {
-            height: 200px;
-            width: auto;
-            max-width: 100%;
-            object-fit: contain;
-        }
+.card-logo {
+    margin-bottom: 5px; /* kecilin jarak */
+    text-align: left;
+    padding: 0;
+}
 
-        .card-subtitle {
-            font-size: 18px;
-            line-height: 1.8;
-            color: #333;
-            margin: 20px 0;
-            font-weight: 400;
-            text-align: center;
-        }
+.card-brand-logo {
+    height: 140px; /* lebih kecil lagi supaya nggak makan ruang */
+    width: auto;
+    object-fit: contain;
+}
 
-        .card-cta-btn {
-            background: #ff6b35;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: inline-block;
-            width: fit-content;
-            margin: 0 auto;
-            text-align: center;
-        }
+.card-subtitle {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 5px 0 15px 0; /* rapetin */
+    color: #333;
+    font-weight: 400;
+    text-align: left;
+    padding: 0;
+}
 
-        .card-cta-btn:hover {
-            background: #e55a2b;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
-        }
+.card-cta-btn {
+    background: #ff6b35;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    width: fit-content;
+    text-align: center;
+    margin-left: 0;
+}
 
-        .hero .card-image {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            min-height: 400px;
-        }
+.card-cta-btn:hover {
+    background: #e55a2b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+}
 
-        .card-house-illustration {
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-            border-radius: 15px;
-            position: relative;
-        }
+/* Bagian gambar rumah */
+.hero .card-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 85%;          /* kontrol besar kecil rumah */
+    height: auto;        /* biar proporsional */
+    object-fit: contain; /* pastikan tidak terpotong */
+    margin: 0;           /* reset margin */
+    z-index: 1;
+}
 
-        .card-house-illustration img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
 
-        .card-house-illustration:hover img {
-            transform: scale(1.02);
-        }
+.card-house-illustration:hover img {
+    transform: scale(1.02);
+}
+
 
         /* About Section */
         .about-content {
@@ -640,6 +643,7 @@
                 gap: 2rem;
                 padding: 2rem;
                 text-align: center;
+                weight: 380px;
             }
 
             .hero .card-image {
