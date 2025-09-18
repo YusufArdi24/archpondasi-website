@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - PONDAsi</title>
+    <link rel="stylesheet" href="/css/hubungi.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link">
+                    <img src="/image/header_PONDAsi.png" alt="PONDAsi Logo" class="header-image">
+                </a>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/html/index.html" class="nav-link">BERANDA</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">TENTANG KAMI</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">LAYANAN <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#">Desain Rumah</a>
+                        <a href="#">Desain Interior</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">PORTFOLIO</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">HUBUNGI KAMI</a>
+                </li>
+            </ul>
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hubungi Kami</h1>
+        </div>
+        <div class="hero-image">
+            <div class="image-placeholder">
+                <div class="worker-image worker1">
+                    <i class="fas fa-hard-hat"></i>
+                </div>
+                <div class="worker-image worker2">
+                    <i class="fas fa-laptop"></i>
+                </div>
+                <div class="worker-image worker3">
+                    <i class="fas fa-drafting-compass"></i>
+                </div>
+            </div>
+        </div>
+        <div class="hero-separator"></div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2>Say hi to us!</h2>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <p>Perumahan Puri Intan Jl. Intan</p>
+                        <p>Raya No.2, Purwokerto</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <p>pondasi@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath fill='%23F57C1F' d='M8 32h6V20h12v12h6V18l-12-8-12 8v14z'/%3E%3Cpath fill='%23333' d='M20 4L4 16h4v16h8V22h8v10h8V16h4L20 4z'/%3E%3C/svg%3E" alt="PONDAsi Logo">
+                        <span class="footer-logo-text">PONDAsi</span>
+                    </div>
+                    <p class="footer-description">
+                        PONDAsi hadir untuk mewujudkan ide terbaik Anda. Kami 
+                        bantu membangun fondasi yang kuat agar ide Anda 
+                        menjadi kenyataan.
+                    </p>
+                    <div class="social-media">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Take a tour</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Beranda</a></li>
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Layanan</a></li>
+                        <li><a href="#">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Layanan</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Desain Rumah</a></li>
+                        <li><a href="#">Desain Interior</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Kontak</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:pondasi@gmail.com">Email pondasi@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2021. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+    </script>
+</body>
+</html>
